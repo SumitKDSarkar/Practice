@@ -1,0 +1,101 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .nav{
+            width: 100%;
+            height: 50px;
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            border: 1px solid black;
+            background-color: teal;
+        }
+        .nav a{
+            text-decoration: none;
+            color: white;
+            font-size: 20px;
+            font-weight: 600;
+
+        }
+        .nav a:hover{
+            cursor: pointer;
+            font-weight: 900;
+            color: red;
+        }
+        .formMain{
+            border: 1px solid black;
+            width: 30%;
+            height: 250px;
+            margin: auto;
+            margin-top: 5%;
+        }
+        .formMain input{
+            width: 90%;
+            height: 30px;
+            display: flex;
+            margin: auto;
+            margin-top: 3%;
+
+        }
+        .h1{
+            text-align: center;
+            margin-top: 5%;
+        }
+        .submit{
+            display: flex;
+            text-align: center;
+          
+        }
+
+    </style>
+</head>
+<body>
+
+    <div class="nav">
+
+        <a href="/">Home</a>
+        <a href="cart.html">Cart</a>
+        <a href="payment.html">Payment</a>
+
+
+    </div>
+    <h1 class="h1">Payment Form</h1>
+    <div class="formMain">
+        
+    <form>
+        <input type="text" id="name"  placeholder="Enter your Name"/>
+        <br/>
+        <input type="number" id="cardNo" placeholder="Enter your Card Number" />
+        <br/>
+        <input type="number" id="cardCvv" placeholder="Enter your CVV" />
+        <br/>
+        <input class="submit" type="submit" value="Confirm"  id="submit"/>
+      </form>
+    </div>
+    
+</body>
+</html>
+<script>
+
+    let form = document.querySelector("form");
+
+    form.addEventListener("submit",function (e){
+
+        e.preventDefault();
+
+        let name = document.getElementById("name").value;
+        let number = document.getElementById("cardNo").value;
+        let cardCvv = document.getElementById("cardCvv").value;
+
+        if(!name || !number || !cardCvv){
+            alert("Any of the given field is empty");
+        }else{
+            window.location.href= "otp.html";
+        }
+    })
+
+</script>
