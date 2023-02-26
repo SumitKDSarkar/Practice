@@ -1,0 +1,35 @@
+/* .h1{
+    color: aqua;
+} */
+
+.search{
+    width: 98%;
+    height: 50px;
+    border-radius: 10px;
+    margin-top: 1%;
+    font-size: 20px;
+
+    border: 1px solid gray;
+    /* color: ghostwhite; */
+}
+.button{
+    background-color: red;
+    color: white;
+    border-radius: 10px;
+    border: none;
+    display: flex;
+    padding: 10px 20px 10px 20px ;
+    justify-self: start;
+}
+.button:hover{
+    cursor: pointer;
+    background-color: rgb(245, 25, 25);
+}
+.edtbutton{
+    background-color: white;
+    border: none;
+}
+.edtbutton:hover{
+    background-color:ghostwhite;
+    cursor: pointer;
+}
